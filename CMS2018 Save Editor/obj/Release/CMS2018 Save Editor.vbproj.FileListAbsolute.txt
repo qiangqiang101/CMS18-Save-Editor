@@ -9,3 +9,14 @@ e:\users\bartholomew\documents\visual studio 2015\Projects\CMS2018 Save Editor\C
 e:\users\bartholomew\documents\visual studio 2015\Projects\CMS2018 Save Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.exe
 e:\users\bartholomew\documents\visual studio 2015\Projects\CMS2018 Save Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.xml
 e:\users\bartholomew\documents\visual studio 2015\Projects\CMS2018 Save Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.pdb
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.exe.config
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.exe
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.xml
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.pdb
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.exe
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.pdb
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.xml
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.vbprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018_Save_Editor.frmSave.resources
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018_Save_Editor.Resources.resources
+C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.vbproj.GenerateResource.Cache

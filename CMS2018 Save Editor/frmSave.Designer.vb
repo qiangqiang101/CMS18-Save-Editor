@@ -35,6 +35,8 @@ Partial Class frmSave
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblLastSave = New System.Windows.Forms.Label()
         Me.lblCopyright = New System.Windows.Forms.Label()
+        Me.txtBarn = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,6 +60,8 @@ Partial Class frmSave
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtBarn)
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.btnSave)
         Me.GroupBox1.Controls.Add(Me.txtLevel)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -75,16 +79,16 @@ Partial Class frmSave
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(130, 135)
+        Me.btnSave.Location = New System.Drawing.Point(130, 146)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(110, 26)
-        Me.btnSave.TabIndex = 7
+        Me.btnSave.TabIndex = 10
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'txtLevel
         '
-        Me.txtLevel.Location = New System.Drawing.Point(93, 106)
+        Me.txtLevel.Location = New System.Drawing.Point(93, 88)
         Me.txtLevel.Name = "txtLevel"
         Me.txtLevel.Size = New System.Drawing.Size(91, 23)
         Me.txtLevel.TabIndex = 6
@@ -92,7 +96,7 @@ Partial Class frmSave
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(43, 109)
+        Me.Label4.Location = New System.Drawing.Point(43, 91)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 15)
         Me.Label4.TabIndex = 5
@@ -100,7 +104,7 @@ Partial Class frmSave
         '
         'txtXP
         '
-        Me.txtXP.Location = New System.Drawing.Point(93, 77)
+        Me.txtXP.Location = New System.Drawing.Point(93, 59)
         Me.txtXP.Name = "txtXP"
         Me.txtXP.Size = New System.Drawing.Size(91, 23)
         Me.txtXP.TabIndex = 4
@@ -108,7 +112,7 @@ Partial Class frmSave
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 80)
+        Me.Label3.Location = New System.Drawing.Point(43, 62)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(21, 15)
         Me.Label3.TabIndex = 3
@@ -116,7 +120,7 @@ Partial Class frmSave
         '
         'txtMoney
         '
-        Me.txtMoney.Location = New System.Drawing.Point(93, 48)
+        Me.txtMoney.Location = New System.Drawing.Point(93, 30)
         Me.txtMoney.Name = "txtMoney"
         Me.txtMoney.Size = New System.Drawing.Size(150, 23)
         Me.txtMoney.TabIndex = 2
@@ -124,7 +128,7 @@ Partial Class frmSave
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 51)
+        Me.Label2.Location = New System.Drawing.Point(43, 33)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 15)
         Me.Label2.TabIndex = 1
@@ -147,6 +151,22 @@ Partial Class frmSave
         Me.lblCopyright.Size = New System.Drawing.Size(60, 15)
         Me.lblCopyright.TabIndex = 4
         Me.lblCopyright.Text = "Copyright"
+        '
+        'txtBarn
+        '
+        Me.txtBarn.Location = New System.Drawing.Point(93, 117)
+        Me.txtBarn.Name = "txtBarn"
+        Me.txtBarn.Size = New System.Drawing.Size(91, 23)
+        Me.txtBarn.TabIndex = 8
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(43, 120)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(36, 15)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Barns"
         '
         'frmSave
         '
@@ -186,4 +206,6 @@ Partial Class frmSave
     Friend WithEvents Label2 As Label
     Friend WithEvents lblLastSave As Label
     Friend WithEvents lblCopyright As Label
+    Friend WithEvents txtBarn As TextBox
+    Friend WithEvents Label5 As Label
 End Class

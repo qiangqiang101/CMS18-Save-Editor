@@ -9,6 +9,8 @@ Public Class frmSave
     Private moneyMemLoc As Integer = &HD4
     Private levelMemLoc As Integer = &HD8
     Private xpMemLoc As Integer = &HDC
+    Private barnMemLoc As Integer = &HE0
+
 
     Private Sub frmSave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadProfiles()
@@ -52,6 +54,9 @@ Public Class frmSave
 
                 br.BaseStream.Seek(xpMemLoc, 0)
                 txtXP.Text = br.ReadInt32()
+
+                br.BaseStream.Seek(barnMemLoc, 0)
+                txtBarn.Text = br.ReadInt32
             End Using
         End If
     End Sub
@@ -68,6 +73,9 @@ Public Class frmSave
 
                 bw.BaseStream.Seek(xpMemLoc, 0)
                 bw.Write(CInt(txtXP.Text))
+
+                bw.BaseStream.Seek(barnMemLoc, 0)
+                bw.Write(CInt(txtBarn.Text))
             End Using
         End If
     End Sub
@@ -77,7 +85,7 @@ Public Class frmSave
         MsgBox("Save file modified completed.", MsgBoxStyle.Information, "Save")
     End Sub
 
-    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMoney.KeyPress, txtLevel.KeyPress, txtXP.KeyPress
+    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMoney.KeyPress, txtLevel.KeyPress, txtXP.KeyPress, txtBarn.KeyPress
         Dim allowedChars As String = $"0123456789{Chr(Keys.Back)}{Chr(Keys.Delete)}"
         If Not allowedChars.Contains(e.KeyChar) Then
             e.KeyChar = ChrW(0)
