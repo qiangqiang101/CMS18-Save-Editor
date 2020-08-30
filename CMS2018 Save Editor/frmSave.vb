@@ -9,7 +9,7 @@ Public Class frmSave
     Private moneyMemLoc As Integer = &HD4
     Private levelMemLoc As Integer = &HD8
     Private xpMemLoc As Integer = &HDC
-    Private barnMemLoc As Integer = &HE0
+    Private barnMemLoc As Integer = &HFC
 
 
     Private Sub frmSave_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,7 +28,9 @@ Public Class frmSave
         Next
 
         For Each pf In Profiles
-            If Not cmbProfile.Items.Contains($"{pf.Name} ({pf.Folder})") Then cmbProfile.Items.Add($"{pf.Name} ({pf.Folder})")
+            If Not pf.Name = Nothing AndAlso Not pf.LastSave = Nothing Then
+                If Not cmbProfile.Items.Contains($"{pf.Name} ({pf.Folder})") Then cmbProfile.Items.Add($"{pf.Name} ({pf.Folder})")
+            End If
         Next
 
         If Profiles.Count <> 0 Then cmbProfile.SelectedIndex = 0
@@ -55,9 +57,22 @@ Public Class frmSave
                 br.BaseStream.Seek(xpMemLoc, 0)
                 txtXP.Text = br.ReadInt32()
 
-                br.BaseStream.Seek(barnMemLoc, 0)
-                txtBarn.Text = br.ReadInt32
+                For i As Integer = 0 To 20
+                    br.BaseStream.Seek(barnMemLoc + i, 0)
+                    Dim cb As CheckBox = flpBarn.Controls.Find($"cbBarn{i + 1}", True).FirstOrDefault
+                    cb.Checked = br.ReadBoolean
+                Next
             End Using
+            btnSave.Enabled = True
+        Else
+            txtMoney.Clear()
+            txtLevel.Clear()
+            txtXP.Clear()
+            For i As Integer = 0 To 20
+                Dim cb As CheckBox = flpBarn.Controls.Find($"cbBarn{i + 1}", True).FirstOrDefault
+                cb.Checked = False
+            Next
+            btnSave.Enabled = False
         End If
     End Sub
 
@@ -74,8 +89,11 @@ Public Class frmSave
                 bw.BaseStream.Seek(xpMemLoc, 0)
                 bw.Write(CInt(txtXP.Text))
 
-                bw.BaseStream.Seek(barnMemLoc, 0)
-                bw.Write(CInt(txtBarn.Text))
+                For i As Integer = 0 To 20
+                    bw.BaseStream.Seek(barnMemLoc + i, 0)
+                    Dim cb As CheckBox = flpBarn.Controls.Find($"cbBarn{i + 1}", True).FirstOrDefault
+                    bw.Write(cb.Checked)
+                Next
             End Using
         End If
     End Sub
@@ -85,7 +103,7 @@ Public Class frmSave
         MsgBox("Save file modified completed.", MsgBoxStyle.Information, "Save")
     End Sub
 
-    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMoney.KeyPress, txtLevel.KeyPress, txtXP.KeyPress, txtBarn.KeyPress
+    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMoney.KeyPress, txtLevel.KeyPress, txtXP.KeyPress
         Dim allowedChars As String = $"0123456789{Chr(Keys.Back)}{Chr(Keys.Delete)}"
         If Not allowedChars.Contains(e.KeyChar) Then
             e.KeyChar = ChrW(0)
@@ -95,6 +113,6 @@ Public Class frmSave
 
     Private Sub frmSave_HelpButtonClicked(sender As Object, e As CancelEventArgs) Handles Me.HelpButtonClicked
         e.Cancel = True
-        MsgBox($"Car Mechanic Simulator 2018 Save Editor v1.0{vbNewLine}For CMS2018 v1.6.5{vbNewLine}Created by I'm Not MentaL{vbNewLine}{vbNewLine}https://www.imnotmental.com/", MsgBoxStyle.OkOnly, "About")
+        MsgBox($"Car Mechanic Simulator 2018 Save Editor {My.Application.Info.Version.ToString}{vbNewLine}For CMS2018 v1.6.5{vbNewLine}Created by I'm Not MentaL{vbNewLine}{vbNewLine}https://www.imnotmental.com/", MsgBoxStyle.OkOnly, "About")
     End Sub
 End Class

@@ -9,8 +9,10 @@ Public Class Profile
     Public Sub New(fldr As String)
         If IO.Directory.Exists($"{SaveGameDir}\{fldr}") Then
             Folder = fldr
-            Name = File.ReadAllText($"{SaveGameDir}\{fldr}\name.txt")
-            LastSave = File.ReadAllText($"{SaveGameDir}\{fldr}\lastSave.txt")
+            Dim nametxt As String = $"{SaveGameDir}\{fldr}\name.txt"
+            Name = If(File.Exists(nametxt), File.ReadAllText(nametxt), Nothing)
+            Dim lastSavetxt As String = $"{SaveGameDir}\{fldr}\lastSave.txt"
+            LastSave = If(File.Exists(lastSavetxt), File.ReadAllText(lastSavetxt), Nothing)
         Else
             Folder = fldr
             Name = Nothing

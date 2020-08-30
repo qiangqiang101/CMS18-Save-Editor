@@ -20,3 +20,14 @@ C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release
 C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018_Save_Editor.frmSave.resources
 C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018_Save_Editor.Resources.resources
 C:\Users\User\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.vbproj.GenerateResource.Cache
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.exe.config
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.exe
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.xml
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.pdb
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.vbprojResolveAssemblyReference.cache
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018_Save_Editor.frmSave.resources
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018_Save_Editor.Resources.resources
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\obj\Release\CMS2018 Save Editor.vbproj.GenerateResource.Cache
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.exe
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.pdb
+E:\Users\Bartholomew\Documents\GitHub\CMS18-Save-Editor\CMS2018 Save Editor\bin\Release\CMS2018 Save Editor.xml
